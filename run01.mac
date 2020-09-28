@@ -1,0 +1,44 @@
+#
+# Macro file for "Hadr04.cc"
+# (can be run in batch, without graphic)
+#
+# neutron 2 MeV; all processes
+#
+/control/verbose 2
+/run/verbose 2
+/tracking/verbose 0
+#
+#/testhadr/phys/thermalScattering true
+#
+/run/initialize
+#
+/process/list
+#
+/gun/particle neutron
+/gun/energy 2.45 MeV
+#
+/analysis/setFileName run01.root
+/analysis/h1/set 0  3000  0 3 MeV
+/analysis/h1/set 1  3000  0 3 MeV
+/analysis/h1/set 2  3000  0 3 MeV
+/analysis/h1/set 3  3000  0 3 MeV
+/analysis/h1/set 4  3000  0 3 MeV
+/analysis/h1/set 5  3000  0 3 MeV
+/analysis/h1/set 6  3000  0 3 MeV
+/analysis/h1/set 7  3000  0 3 MeV
+/analysis/h1/set 8  6000  0 6 MeV
+/analysis/h1/set 9  6000  0 6 MeV
+/analysis/h1/set 10  3000  0 3 MeV
+/analysis/h1/set 11  100  0 1000 us #neutron capture time 
+/analysis/h2/set 0 160 -800 800 cm none linear 160 -800 800 cm none linear # Test plane#1, y:x
+/analysis/h2/set 1 160 -800 800 cm none linear 160 -800 800 cm none linear # Test plane#2, y:x
+/analysis/h2/set 2 160 -800 800 cm none linear 110 -1500 -400 cm none linear  # Test plane#3, z:x
+/analysis/h2/set 3 160 -800 800 cm none linear 160 -800 800 cm none linear  # Test plane#4, z:x
+/analysis/h2/set 4 160 -800 800 cm none linear 160 -800 800 cm none linear # Test plane#1, y:x
+/analysis/h2/set 5 160 -800 800 cm none linear 160 -800 800 cm none linear # Test plane#2, y:x
+/analysis/h2/set 6 160 -800 800 cm none linear 110 -1500 -400 cm none linear  # Test plane#3, z:x
+/analysis/h2/set 7 160 -800 800 cm none linear 160 -800 800 cm none linear  # Test plane#4, z:x
+#
+/run/printProgress 1000
+#
+/run/beamOn 100

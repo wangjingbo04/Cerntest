@@ -35,8 +35,6 @@
 
 #include "G4UserRunAction.hh"
 #include "globals.hh"  
-#include "TFile.h"
-#include "TTree.h" 
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
